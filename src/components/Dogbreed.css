@@ -1,0 +1,13 @@
+.back {
+    padding: 10px;
+    display: flex; 
+    flex-direction: row; 
+    font-size: larger;
+    font-weight: bolder;
+    color: blue
+
+}
+
+img {
+    padding: 10px
+}
