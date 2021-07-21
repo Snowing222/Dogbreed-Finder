@@ -25,13 +25,17 @@ function App() {
     setSearchTerm("")
   }
 
+  const handleSetSearchTerm = (SearchTerm) => {
+    setSearchTerm(SearchTerm)
+  }
+
 
   return (
     <div className = "App">
         <h1>Dog Breed Finder</h1>
         <Switch>
           <Route exact path = "/">
-            <Dogbreeds dogbreeds = {dogbreeds} searchTerm = {searchTerm} setSearchTerm = {setSearchTerm}/>
+            <Dogbreeds dogbreeds = {dogbreeds} searchTerm = {searchTerm} handleSetSearchTerm = {handleSetSearchTerm}/>
           </Route>
           <Route path = "/:breed">
             <Dogbreed resetSearchTerm = {resetSearchTerm} />

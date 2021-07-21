@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Dogbreeds = ({dogbreeds, searchTerm, setSearchTerm}) => {
+const Dogbreeds = ({dogbreeds, searchTerm, handleSetSearchTerm}) => {
     return (
         <div>
-           <input type = 'text' placeholder = 'Search...' onChange = {(e)=>{setSearchTerm(e.target.value)}}/>
+           <input type = 'text' placeholder = 'Search...' onChange = {(e)=>{handleSetSearchTerm(e.target.value)}}/>
             {dogbreeds.filter((val)=>{
               if(searchTerm === ""){
                 return val
