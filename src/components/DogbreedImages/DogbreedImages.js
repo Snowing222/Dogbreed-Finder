@@ -1,25 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import {withRouter, Link} from 'react-router-dom'
 
-import './Dogbreed.css'
+import './DogbreedImages.css'
+import useDogbreed from './useDogbreedImages'
 
-const Dogbreed = ({match, resetSearchTerm}) => {
-    const [images, setImages] = useState([])
-    const breed = match.params.breed
-    const fetchImages = () =>{
-        fetch(`https://dog.ceo/api/breed/${breed}/images/random/4`)
-        .then(resp => resp.json())
-        .then(data => {
-            setImages(data)
-            resetSearchTerm()
-        })
-
-    }
-
-    useEffect(()=>{
-        fetchImages()
-    },[breed])
-
+const Dogbreed = () => {
+    const {images} = useDogbreed()
     return (
         <div>
            <Link to = '/' className ="back">Search More breed</Link>
