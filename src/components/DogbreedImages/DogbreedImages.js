@@ -1,11 +1,10 @@
-import React, {useState, useEffect} from 'react'
 import {withRouter, Link} from 'react-router-dom'
 
 import './DogbreedImages.css'
 import useDogbreed from './useDogbreedImages'
 
 const Dogbreed = () => {
-    const {images} = useDogbreed()
+    const images = useDogbreed()
     return (
         <div>
            <Link to = '/' className ="back">Search More breed</Link>

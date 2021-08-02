@@ -9,7 +9,8 @@ const Homepage = () => {
     searchTerm,
     handleSetSearchTerm,
   } = UseHomepage()
-  
+
+
     return (
         <div>
         <input type = 'text' placeholder = 'Search...' onChange = {(e)=>{handleSetSearchTerm(e.target.value)}}/>

@@ -5,20 +5,16 @@ const useDogbreed = () => {
   
     const [images, setImages] = useState([])
     const {breed}  = useParams()
-    const fetchImages = () =>{
+      
+    useEffect(()=>{
         fetch(`https://dog.ceo/api/breed/${breed}/images/random/4`)
         .then(resp => resp.json())
         .then(data => {
             setImages(data)
         })
-      
-    }
-      
-    useEffect(()=>{
-        fetchImages()
     },[breed])
 
-    return {images};
+    return images
 }
 
 export default useDogbreed

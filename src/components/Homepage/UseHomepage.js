@@ -23,6 +23,7 @@ const UseHomepage = () => {
     fetchDogbreeds();
   }, []);
 
+
   return {
     dogbreeds,
     searchTerm,
