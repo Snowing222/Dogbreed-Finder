@@ -1,21 +1,23 @@
 import React from 'react'
 import UseHomepage from './UseHomepage'
 import {Link} from 'react-router-dom'
+import Searchbar from './Searchbar'
 
 
 const Homepage = () => {
+
   const {
     handleSetSearchTerm,
     filteredDogbreeds
   } = UseHomepage()
 
-
     return (
         <div>
-        <input type = 'text' placeholder = 'Search...' onChange = {(e)=>{handleSetSearchTerm(e.target.value)}}/>
+         <Searchbar handleSetSearchTerm = {handleSetSearchTerm} />
+  
          {filteredDogbreeds.map((dogbreed) => (
            <li key = {dogbreed}>
-               <Link to = {"/" + dogbreed}>{dogbreed} </Link>
+               <Link to = {"/" + dogbreed} title = "dogbreedlink">{dogbreed} </Link>
            </li>
             
          ))}

@@ -31,7 +31,6 @@ const UseHomepage = () => {
     }
   })
 
-
   return {
     handleSetSearchTerm,
     filteredDogbreeds
