@@ -1,7 +1,7 @@
 import { useState , useEffect,} from 'react'
 import { useParams } from 'react-router'
 
-const useDogbreed = () => {
+const useDogbreedImages = () => {
   
     const [images, setImages] = useState([])
     const {breed}  = useParams()
@@ -17,4 +17,4 @@ const useDogbreed = () => {
     return images
 }
 
-export default useDogbreed
+export default useDogbreedImages

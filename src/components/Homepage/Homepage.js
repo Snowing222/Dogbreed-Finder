@@ -5,22 +5,15 @@ import {Link} from 'react-router-dom'
 
 const Homepage = () => {
   const {
-    dogbreeds,
-    searchTerm,
     handleSetSearchTerm,
+    filteredDogbreeds
   } = UseHomepage()
 
 
     return (
         <div>
         <input type = 'text' placeholder = 'Search...' onChange = {(e)=>{handleSetSearchTerm(e.target.value)}}/>
-         {dogbreeds.filter((val)=>{
-           if(searchTerm === ""){
-             return val
-           }else if(val.includes(searchTerm.toLocaleLowerCase())){
-             return val
-           }
-         }).map((dogbreed) => (
+         {filteredDogbreeds.map((dogbreed) => (
            <li key = {dogbreed}>
                <Link to = {"/" + dogbreed}>{dogbreed} </Link>
            </li>

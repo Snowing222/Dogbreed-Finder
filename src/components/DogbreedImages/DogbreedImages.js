@@ -1,21 +1,25 @@
-import {withRouter, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 import './DogbreedImages.css'
-import useDogbreed from './useDogbreedImages'
+import useDogbreedImages from './useDogbreedImages'
 
-const Dogbreed = () => {
-    const images = useDogbreed()
+const displayImages = (images) => images.message && images.message.map((img, index) =>(
+    <img src = {img} width="300" height="400" alt = {index} key = {index}/>
+))
+
+
+const DogbreedImages = () => {
+    const images = useDogbreedImages()
+
     return (
         <div>
            <Link to = '/' className ="back">Search More breed</Link>
            {
-               images.message && images.message.map((img, index) =>(
-                   <img src = {img} width="300" height="400" alt = {index} key = {index}/>
-               ))
+              displayImages(images)
            }
           
         </div>
     )
 }
 
-export default withRouter(Dogbreed)
+export default DogbreedImages

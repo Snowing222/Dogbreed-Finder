@@ -23,12 +23,18 @@ const UseHomepage = () => {
     fetchDogbreeds();
   }, []);
 
+  const filteredDogbreeds = dogbreeds.filter((val)=>{
+    if(searchTerm === ""){
+      return val
+    }else if(val.includes(searchTerm.toLocaleLowerCase())){
+      return val
+    }
+  })
+
 
   return {
-    dogbreeds,
-    searchTerm,
-    resetSearchTerm,
     handleSetSearchTerm,
+    filteredDogbreeds
   };
 }
 
