@@ -19,7 +19,6 @@ function App() {
             <DogbreedImages />
           </Route>
         </Switch>
-        
     </div>
   );
 }

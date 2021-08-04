@@ -1,24 +1,28 @@
-import { render, fireEvent } from "@testing-library/react";
+import React from 'react'
+import {render,screen, act} from "@testing-library/react"
 import Homepage from './Homepage'
 
-it('check Search render', ()=>{
-   const {queryByTitle} =  render(<Homepage />)
-   const input = queryByTitle("input")
-   expect(input).toBeTruthy()
-})
-
-
-describe("changeInput", () =>{
-    it("onChange", ()=>{
-        const {queryByTitle} =  render(<Homepage />)
-        const input = queryByTitle("input")
-        fireEvent.change(input,{target: { value: "testValue"}} )
-        expect(input.value).toBe('testValue')
+global.fetch = jest.fn(()=> Promise.resolve({
+    json: ()=> Promise.resolve({
+        
+            "message": {
+                "affenpinscher": [],
+                "african": [],
+                "airedale": [],
+                "akita": [],
+                "appenzeller": [],
+                "australian": [
+                    "shepherd"
+                ],
+            }
     })
-})
 
+}))
 
+// describe("Homepage", ()=>{
+//     it("loads dogbreeds data on mount",async ()=>{
+//         await act(async()=> render(<Homepage />))
+//         expect(screen.getByText("affenpinscher")).toBeInTheDocument()
 
-
-
-
+//     })
+// })

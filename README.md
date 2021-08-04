@@ -5,9 +5,9 @@ Built with React, JavaScript, and CSS.
 
 # Project Overall
  - [x] Have a homepage that shows a list of all breeds available on the Dog API.
- - [x]Allow users to filter the list of breeds with simple substring matching.
+ - [x] Allow users to filter the list of breeds with simple substring matching.
  - [x] Allow users to click into each breed, and open a separate page showing four random pictures of dogs from that breed.
- - [x]Users is able to navigate back to the list page without reloading the app.. 
+ - [x] Users is able to navigate back to the list page without reloading the app.. 
 
 # Project Screen Shot(s)
 ![Project screen shot 1](https://i.ibb.co/k2BS59H/Capture.jpg)
@@ -26,7 +26,7 @@ To Start Server:
 ***npm start***
 
 To Visit App:
-localhost:3000
+***localhost:3000***
 
 Reflection
 What was the context for this project? (ie: was this a side project? was this for Turing? was this for an experiment?)
@@ -41,6 +41,31 @@ This was a take-home assignment from Principles. Project goal is to not only mee
 After my first submit, I got feedback from the hiring team as below:
 
 1. One thing we expect from our team and accordingly grade submissions for is proper, valuable test coverage. Your submission is lacking tests for the functionality you developed.
+Comment:
+User Story - What to test:
+
+Searchbar.test.js
+- [] Home page should render search bar
+- [] Search bar should change input
+
+Homepage.test.js
+- [] Home page should render list of dogbreeds
+
+UseHomepage.test.js
+- [] When search Term is empty. Homepage should return a list of dogbreeds.
+- [] User should filter the list of breeds with simple substring matching.
+
+useDogbreedImages.test.js
+- [] should return list of 4 images
+
+DogbreedImages.test.js
+- [] should render 4 images
+
+
+
+
+
+
 
 2. Another thing we expect from ourselves and grade the submissions for is proper componentization and separation of concerns within our code. Some of your components are not properly separating concerns. You may find this blog post helpful in thinking about this feedback (https://felixgerschau.com/react-hooks-separation-of-concerns/).
 
