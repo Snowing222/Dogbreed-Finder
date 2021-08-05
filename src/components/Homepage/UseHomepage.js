@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const UseHomepage = () => {
+const UseHomepage = (url) => {
   const [dogbreeds, setDogbreeds] = useState([])
   let [searchTerm, setSearchTerm] = useState("")
 
@@ -9,31 +9,22 @@ const UseHomepage = () => {
   }
 
   const fetchDogbreeds = () =>{
-    fetch('https://dog.ceo/api/breeds/list/all')
+    fetch(url)
     .then(resp => resp.json())
     .then(data => setDogbreeds(Object.keys(data.message)))
   }
 
-  const handleSetSearchTerm = (SearchTerm) => {
-    setSearchTerm(SearchTerm)
-  }
 
   useEffect(() => {
     resetSearchTerm()
     fetchDogbreeds();
   }, []);
 
-  const filteredDogbreeds = dogbreeds.filter((val)=>{
-    if(searchTerm === ""){
-      return val
-    }else if(val.includes(searchTerm.toLocaleLowerCase())){
-      return val
-    }
-  })
 
   return {
-    handleSetSearchTerm,
-    filteredDogbreeds
+    setSearchTerm,
+    dogbreeds,
+    searchTerm
   };
 }
 

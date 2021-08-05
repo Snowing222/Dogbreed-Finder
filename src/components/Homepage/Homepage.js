@@ -7,13 +7,22 @@ import Searchbar from './Searchbar'
 const Homepage = () => {
 
   const {
-    handleSetSearchTerm,
-    filteredDogbreeds
-  } = UseHomepage()
+    setSearchTerm,
+    dogbreeds,
+    searchTerm
+  } = UseHomepage('https://dog.ceo/api/breeds/list/all')
+
+  const filteredDogbreeds = dogbreeds.filter((val)=>{
+    if(searchTerm === ""){
+      return val
+    }else if(val.includes(searchTerm.toLocaleLowerCase())){
+      return val
+    }
+  })
 
     return (
         <div>
-         <Searchbar handleSetSearchTerm = {handleSetSearchTerm} />
+         <Searchbar setSearchTerm = {setSearchTerm} />
   
          {filteredDogbreeds.map((dogbreed) => (
            <li key = {dogbreed}>

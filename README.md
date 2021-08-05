@@ -42,6 +42,7 @@ After my first submit, I got feedback from the hiring team as below:
 
 1. One thing we expect from our team and accordingly grade submissions for is proper, valuable test coverage. Your submission is lacking tests for the functionality you developed.
 Comment:
+I understand how to wite class based components and test by shallow rendering them. tESTING CLASS
 User Story - What to test:
 
 Searchbar.test.js
