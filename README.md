@@ -14,9 +14,6 @@ writing test in progress
  - [x] Users is able to navigate back to the list page without reloading the app.. 
 
 # Project Screen Shot(s)
-![Project screen shot 1](https://i.ibb.co/k2BS59H/Capture.jpg)
-![Project screen shot 1](https://i.ibb.co/k2BS59H/Capture.jpg)
-![Project screen shot 2](https://i.ibb.co/Ksk275y/Capture3.jpg)
 ![zoom_0 (1)](https://user-images.githubusercontent.com/62358655/128387709-c78ae675-6050-4cae-81f6-43206fce66b7.gif)
 
 
