@@ -63,7 +63,8 @@ DogbreedImages.test.js
 ***2. Another thing we expect from ourselves and grade the submissions for is proper componentization and separation of concerns within our code. Some of your components are not properly separating concerns. You may find this blog post helpful in thinking about this feedback (https://felixgerschau.com/react-hooks-separation-of-concerns/).***
 
 ***Comment***
-The blog that team sent me is very helpful for me to understand what's the team is looking for. As I didnt implement custom hook to seperating concerns in my previous projects. Although this is just a simple project, I can see the benefit of seperating hooks out of the presentational component. How this practice will benefit a more complex project.
+The blog that team sent me is very helpful for me to understand what's the team is looking for. As I didnt implement custom hook to seperating concerns in my previous projects, I can see the benefit of seperating hooks out of the presentational component. How this practice will benefit when it comes to a more complex project.
+
 Seperate custom hook useHomepge and useDogbreedImages.
 Seperate seachbar component
 
