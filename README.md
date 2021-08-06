@@ -52,7 +52,7 @@ Searchbar.test.js
 - [] Search bar should change input
 
 UseHomepage.test.js
-- [] Should call url and fetch list of dogbreed.
+- [x] Should call url and fetch list of dogbreed.
 
 useDogbreedImages.test.js
 - [] Should call url and should fetch list of 4 images

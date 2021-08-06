@@ -5,7 +5,7 @@ import fetchMock from "fetch-mock";
 import { act } from "react-test-renderer";
 
 
-describe("useDataApi", () => {
+describe("useHomepage to fetch list of dogbreeds ", () => {
   beforeAll(() => {
     global.fetch = fetch;
   });
@@ -17,7 +17,7 @@ describe("useDataApi", () => {
 
   it("should return data with a successful request", async () => {
     const { result } = renderHook(() => UseHomepage());
-
+  
     fetchMock.mock("test.com", {
         message: {
         affenpinscher: [ ],
@@ -31,16 +31,20 @@ describe("useDataApi", () => {
     }
     });
 
-   
     await act(async () => {
       result.current.fetchDogbreeds("test.com");
     });
 
-    console.log(result.current)
-
-    // expect(result.current.data).toBe({
-    //   returnedData: "foo"
-    // });
+    expect(result.current.dogbreeds).toStrictEqual(
+        [
+            'affenpinscher',
+            'african',
+            'airedale',
+            'akita',
+            'appenzeller',
+            'australian'
+          ]
+    );
   });
 });
 
