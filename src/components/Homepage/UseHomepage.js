@@ -8,7 +8,7 @@ const UseHomepage = (url) => {
     setSearchTerm("")
   }
 
-  const fetchDogbreeds = () =>{
+  const fetchDogbreeds = (url) =>{
     fetch(url)
     .then(resp => resp.json())
     .then(data => setDogbreeds(Object.keys(data.message)))
@@ -24,7 +24,8 @@ const UseHomepage = (url) => {
   return {
     setSearchTerm,
     dogbreeds,
-    searchTerm
+    searchTerm,
+    fetchDogbreeds
   };
 }
 
