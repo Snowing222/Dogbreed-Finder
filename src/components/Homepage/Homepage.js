@@ -26,7 +26,7 @@ const Homepage = () => {
   
          {filteredDogbreeds.map((dogbreed) => (
            <li key = {dogbreed}>
-               <Link to = {"/" + dogbreed} title = "dogbreedlink">{dogbreed} </Link>
+               <Link to = {"/" + dogbreed} title = "dogbreedlink" ata-testid = "dogbreedlink">{dogbreed} </Link>
            </li>
             
          ))}

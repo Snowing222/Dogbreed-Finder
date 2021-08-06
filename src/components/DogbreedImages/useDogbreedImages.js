@@ -10,7 +10,7 @@ const useDogbreedImages = () => {
         fetch(`https://dog.ceo/api/breed/${breed}/images/random/4`)
         .then(resp => resp.json())
         .then(data => {
-            setImages(data)
+            setImages(data.message)
         })
     },[breed])
 

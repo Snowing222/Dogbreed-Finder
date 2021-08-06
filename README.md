@@ -43,13 +43,12 @@ Below is what I have so far. I hope the team can give me some feedback on this, 
 User Story - What I want to test:
 
 Homepage.test.js
-- [] Home page should render search bar
 - [] When page first load. Home page should render list of dogbreeds
 - [] User should filter the list of breeds with simple substring matching.
 - [] When search Term is empty. Homepage should return a list of dogbreeds.
 
 Searchbar.test.js
-- [] Search bar should change input
+- [x] Search bar should render input field
 
 UseHomepage.test.js
 - [x] Should call url and fetch list of dogbreed.
@@ -58,7 +57,7 @@ useDogbreedImages.test.js
 - [x] Should call url and should fetch list of dog imgages for a specific breed
 
 DogbreedImages.test.js
-- [] should render 4 images on the page
+- [x] should render 4 images on the page
 
 ***2. Another thing we expect from ourselves and grade the submissions for is proper componentization and separation of concerns within our code. Some of your components are not properly separating concerns. You may find this blog post helpful in thinking about this feedback (https://felixgerschau.com/react-hooks-separation-of-concerns/).***
 
