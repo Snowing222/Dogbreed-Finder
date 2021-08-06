@@ -37,7 +37,7 @@ After my first submit, I got feedback from the hiring team as below, and here is
 ***1. One thing we expect from our team and accordingly grade submissions for is proper, valuable test coverage. Your submission is lacking tests for the functionality you developed.***
 
 ***Comment***
-I understand how to wite class based components and test by shallow rendering them. I'm not familar with writing test for custom hook w/ fetching and functional component. This lead me to spend a few days on reading , there is differenct opinions, but I couldnt find the right doc to follow and figure out the proper testing stradegy for my code. 
+I understand how to wite class based components and test by shallow rendering them. I'm not familar with writing test for custom hook w/ fetching and functional component. This lead me to spend a few days on fiercely googling and reading, there is differenct opinions, but I couldnt find the satisfied doc to follow and figure out the proper testing stradegy for my code. 
 Below is what I have so far. I hope the team can give me some feedback on this, and point me to the right direction.
 
 User Story - What I want to test:
