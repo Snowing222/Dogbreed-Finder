@@ -1,17 +1,15 @@
 import { useState , useEffect,} from 'react'
 import { useParams } from 'react-router'
+import dogbreedImages from '../.././services/fetchDogImages'
 
 const useDogbreedImages = () => {
   
     const [images, setImages] = useState([])
     const {breed}  = useParams()
       
-    useEffect(()=>{
-        fetch(`https://dog.ceo/api/breed/${breed}/images/random/4`)
-        .then(resp => resp.json())
-        .then(data => {
-            setImages(data.message)
-        })
+    useEffect(async()=>{
+        const dogImages = await dogbreedImages(breed)
+        setImages(dogImages)
     },[breed])
 
     return images

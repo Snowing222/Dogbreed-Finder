@@ -2,13 +2,14 @@ import {Link} from 'react-router-dom'
 
 import './DogbreedImages.css'
 import useDogbreedImages from './useDogbreedImages'
+import DogbreedImage from './DogbreedImage'
 
 
 const DogbreedImages = () => {
     const images = useDogbreedImages()
 
-    const displayImages = (images) => images && images.map((img, index) =>(
-        <img src = {img} width="300" height="400" alt = {index} key = {index} title = "image"/>
+    const displayImages = (images) => images.map((img, index) =>(
+        <DogbreedImage img = {img} index = {index}/>
     ))
 
     return (
