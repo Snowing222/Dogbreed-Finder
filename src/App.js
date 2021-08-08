@@ -1,9 +1,10 @@
 import React from 'react'
 import { Switch, Route } from "react-router-dom";
 
-import Homepage from './components/Homepage/Homepage'
-import DogbreedImages from './components/DogbreedImages/DogbreedImages';
+import HomepageContainer from './components/Homepage/HomepageContainer'
+import DogbreedImages from './components/DogbreedImages/DogbreedImagesContainer';
 import './App.css'
+import DogbreedImagescontainer from './components/DogbreedImages/DogbreedImagesContainer';
 
 
 function App() {
@@ -13,10 +14,10 @@ function App() {
         <h1>Dog Breed Finder</h1>
         <Switch>
           <Route exact path = "/">
-            <Homepage />
+            <HomepageContainer />
           </Route>
           <Route path = "/:breed">
-            <DogbreedImages />
+            <DogbreedImagescontainer />
           </Route>
         </Switch>
     </div>

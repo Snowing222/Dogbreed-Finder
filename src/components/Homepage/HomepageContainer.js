@@ -1,19 +1,27 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import Searchbar from './Searchbar'
+import UseHomepage from './UseHomepage'
 
-const HomepageContainer = ({setSearchTerm, filteredDogbreeds}) => {
+import Homepage from './Homepage'
+
+
+const HomepageContainer = () => {
+
+  const {
+    setSearchTerm,
+    dogbreeds,
+    searchTerm
+  } = UseHomepage('https://dog.ceo/api/breeds/list/all')
+
+  const filteredDogbreeds = dogbreeds.filter((val)=>{
+    if(searchTerm === ""){
+      return val
+    }else if(val.includes(searchTerm.toLocaleLowerCase())){
+      return val
+    }
+  })
+
     return (
-        <div>
-         <Searchbar setSearchTerm = {setSearchTerm} />
-  
-         {filteredDogbreeds.map((dogbreed) => (
-           <li key = {dogbreed}>
-               <Link to = {"/" + dogbreed} title = "dogbreedlink" ata-testid = "dogbreedlink">{dogbreed} </Link>
-           </li>
-            
-         ))}
-     </div>
+      <Homepage filteredDogbreeds={filteredDogbreeds} setSearchTerm={setSearchTerm} />
     )
 }
 
