@@ -1,7 +1,7 @@
 import React from 'react'
 import UseHomepage from './UseHomepage'
-import {Link} from 'react-router-dom'
-import Searchbar from './Searchbar'
+
+import HomepageContainer from './HomepageContainer'
 
 
 const Homepage = () => {
@@ -21,16 +21,7 @@ const Homepage = () => {
   })
 
     return (
-        <div>
-         <Searchbar setSearchTerm = {setSearchTerm} />
-  
-         {filteredDogbreeds.map((dogbreed) => (
-           <li key = {dogbreed}>
-               <Link to = {"/" + dogbreed} title = "dogbreedlink" ata-testid = "dogbreedlink">{dogbreed} </Link>
-           </li>
-            
-         ))}
-     </div>
+      <HomepageContainer filteredDogbreeds={filteredDogbreeds} setSearchTerm={setSearchTerm} />
     )
 }
 
