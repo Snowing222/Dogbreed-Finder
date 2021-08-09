@@ -1,6 +1,6 @@
 import { useState , useEffect,} from 'react'
 import { useParams } from 'react-router'
-import dogbreedImages from '../.././services/fetchDogImages'
+import dogbreedImages from '../services/fetchDogImages'
 
 const useDogbreedImages = () => {
   

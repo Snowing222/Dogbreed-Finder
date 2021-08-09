@@ -1,14 +1,12 @@
 import {Link} from 'react-router-dom'
 
 import './DogbreedImages.css'
-import useDogbreedImages from './useDogbreedImages'
-import DogbreedImages from './DogbreedImages'
+import useDogbreedImages from './useDogbreedImagesContainer'
+import DogbreedImages from '../components/DogbreedImages/DogbreedImages'
 
 
 const DogbreedImagescontainer = () => {
     const images = useDogbreedImages()
-
-
     return (
         <div>
            <Link to = '/' className ="back">Search More breed</Link>

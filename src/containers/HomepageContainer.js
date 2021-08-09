@@ -1,7 +1,7 @@
 import React from 'react'
-import UseHomepage from './UseHomepage'
+import UseHomepage from './UseHomepageContainer'
 
-import Homepage from './Homepage'
+import Homepage from '../components/Homepage/Homepage'
 
 
 const HomepageContainer = () => {

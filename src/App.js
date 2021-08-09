@@ -1,10 +1,10 @@
 import React from 'react'
 import { Switch, Route } from "react-router-dom";
 
-import HomepageContainer from './components/Homepage/HomepageContainer'
-import DogbreedImages from './components/DogbreedImages/DogbreedImagesContainer';
+import HomepageContainer from './containers/HomepageContainer'
+import DogbreedImages from './containers/DogbreedImagesContainer';
 import './App.css'
-import DogbreedImagescontainer from './components/DogbreedImages/DogbreedImagesContainer';
+import DogbreedImagescontainer from './containers/DogbreedImagesContainer';
 
 
 function App() {
