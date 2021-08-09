@@ -13,8 +13,7 @@ const useDogbreedImages = () => {
             setImages(dogImages)
         }
         getImages()
-    }
-        ,[breed])
+    },[breed])
 
     return images
 }

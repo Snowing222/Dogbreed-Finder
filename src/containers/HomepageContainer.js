@@ -10,7 +10,7 @@ const HomepageContainer = () => {
     setSearchTerm,
     dogbreeds,
     searchTerm
-  } = UseHomepage('https://dog.ceo/api/breeds/list/all')
+  } = UseHomepage()
 
   const filteredDogbreeds = dogbreeds.filter((val)=>{
     if(searchTerm === ""){
