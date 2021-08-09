@@ -8,10 +8,11 @@ const useDogbreedImages = () => {
     const {breed}  = useParams()
       
     useEffect(()=>{
-            const getImages = async()=>{
+            const getImages = async()=>
+            {
             const dogImages = await dogbreedImages(breed)
             setImages(dogImages)
-        }
+            }
         getImages()
     },[breed])
 

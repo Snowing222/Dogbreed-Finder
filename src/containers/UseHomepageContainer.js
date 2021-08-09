@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import DogbreedImage from '../components/DogbreedImages/DogbreedImage'
-import dogbreeds from '../services/fetchDogbreeds'
+import alldogbreeds from '../services/fetchDogbreeds'
+
 
 const UseHomepage = () => {
   const [dogbreeds, setDogbreeds] = useState([])
@@ -10,27 +10,36 @@ const UseHomepage = () => {
     setSearchTerm("")
   }
 
-  const fetchDogbreeds = () =>{
-    fetch('https://dog.ceo/api/breeds/list/all')
-    .then(resp => resp.json())
-    .then(data => setDogbreeds(Object.keys(data.message)))
-  }
+  // const fetchDogbreeds = () =>{
+  //   fetch('https://dog.ceo/api/breeds/list/all')
+  //   .then(resp => resp.json())
+  //   .then(data => setDogbreeds(Object.keys(data.message)))
+  // }
 
 
   useEffect(() => {
-    const getBreeds = async()=>{
-      const dogbreeds = await dogbreeds()
-      setDogbreeds(DogbreedImage)
+    const getBreeds = async()=>
+    {
+      const dogbreeds = await alldogbreeds()
+      setDogbreeds(dogbreeds)
     }
     resetSearchTerm()
     getBreeds()
   }, []);
 
+//   useEffect(()=>{
+//     const getImages = async()=>
+//     {
+//     const dogImages = await dogbreedImages(breed)
+//     setImages(dogImages)
+//     }
+// getImages()
+// },[breed])
+
   return {
     setSearchTerm,
     dogbreeds,
     searchTerm,
-    fetchDogbreeds
   };
 }
 
